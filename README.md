@@ -1,94 +1,94 @@
 # Bike Sharing Dashboard
 
-Dashboard interaktif untuk menganalisis data penyewaan sepeda dari Bike Sharing Dataset. Proyek ini dibuat dengan Streamlit dan menampilkan ringkasan performa penyewaan sepeda berdasarkan rentang tanggal, cuaca, musim, temperatur, dan kelembapan.
+An interactive dashboard for analyzing bike rental patterns from the Bike Sharing Dataset. This project is built with Streamlit and summarizes rental performance by date range, weather condition, season, temperature, and humidity.
 
-## Ringkasan Proyek
+## Project Overview
 
-Dashboard ini menggunakan data historis penyewaan sepeda tahun 2011-2012 dari Capital Bikeshare, Washington D.C. Data utama yang dipakai aplikasi adalah `all_df.csv`, yaitu data hasil pengolahan dari dataset harian dan per jam.
+This dashboard uses historical bike rental data from Capital Bikeshare, Washington D.C. for 2011-2012. The main dataset used by the app is `all_df.csv`, which is the processed data prepared from the daily and hourly datasets.
 
-Fitur utama dashboard:
+Main dashboard features:
 
-- Filter rentang tanggal melalui sidebar.
-- Total penyewaan sepeda dalam periode terpilih.
-- Estimasi pendapatan dengan asumsi Rp10.000 per penyewa.
-- Tren penyewaan harian.
-- Visualisasi hubungan temperatur dan kelembapan terhadap jumlah penyewaan.
-- Perbandingan total penyewaan berdasarkan kondisi cuaca.
-- Perbandingan total penyewaan berdasarkan musim.
-- Informasi jumlah penyewaan harian tertinggi pada periode terpilih.
+- Date range filtering from the sidebar.
+- Total bike rentals for the selected period.
+- Estimated revenue using an assumption of IDR 10,000 per renter.
+- Daily rental trend visualization.
+- Temperature and humidity comparison against rental counts.
+- Total rental comparison by weather condition.
+- Total rental comparison by season.
+- Maximum daily rental count for the selected period.
 
-## Struktur File
+## File Structure
 
 ```text
 .
-├── dashboard.py                  # Aplikasi dashboard Streamlit
-├── Proyek_Analisis_Data.ipynb    # Notebook eksplorasi dan analisis data
-├── all_df.csv                    # Dataset hasil pengolahan yang digunakan dashboard
-├── day.csv                       # Dataset agregasi harian
-├── hour.csv                      # Dataset agregasi per jam
-├── penamaan_pada_data.txt        # Dokumentasi atribut dataset
-├── requirements.txt              # Daftar dependency Python
-└── link.txt                      # Link dashboard yang sudah dipublikasikan
+├── dashboard.py                  # Streamlit dashboard application
+├── Proyek_Analisis_Data.ipynb    # Exploratory data analysis notebook
+├── all_df.csv                    # Processed dataset used by the dashboard
+├── day.csv                       # Daily aggregated dataset
+├── hour.csv                      # Hourly aggregated dataset
+├── penamaan_pada_data.txt        # Dataset attribute documentation
+├── requirements.txt              # Python dependencies
+└── link.txt                      # Published dashboard link
 ```
 
-## Menjalankan Dashboard Secara Lokal
+## Run the Dashboard Locally
 
-Pastikan Python sudah terpasang. Proyek ini direkomendasikan berjalan dengan Python 3.9 atau versi yang kompatibel dengan dependency pada `requirements.txt`.
+Make sure Python is installed. This project is recommended to run with Python 3.9 or another version compatible with the packages listed in `requirements.txt`.
 
-### 1. Masuk ke folder proyek
+### 1. Go to the project folder
 
 ```sh
 cd "/Users/haifanghani/Library/Mobile Documents/com~apple~CloudDocs/Tugas Dicoding/ProyekAkhir_1"
 ```
 
-Jika menjalankan dari folder lain, sesuaikan path dengan lokasi proyek di komputer Anda.
+If you are running the project from another location, adjust the path to match where the project is stored on your machine.
 
-### 2. Buat dan aktifkan virtual environment
+### 2. Create and activate a virtual environment
 
-Dengan `venv`:
+Using `venv`:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Atau dengan Conda:
+Or using Conda:
 
 ```sh
 conda create --name bike-sharing-dashboard python=3.9
 conda activate bike-sharing-dashboard
 ```
 
-### 3. Install dependency
+### 3. Install dependencies
 
 ```sh
 pip install -r requirements.txt
 ```
 
-### 4. Jalankan aplikasi Streamlit
+### 4. Run the Streamlit app
 
 ```sh
 streamlit run dashboard.py
 ```
 
-Setelah perintah dijalankan, Streamlit akan menampilkan URL lokal seperti:
+After the command runs, Streamlit will show a local URL such as:
 
 ```text
 http://localhost:8501
 ```
 
-Buka URL tersebut di browser untuk menggunakan dashboard.
+Open that URL in your browser to use the dashboard.
 
-## Catatan Penting
+## Important Notes
 
-- Jalankan perintah `streamlit run dashboard.py` dari root folder proyek agar file `all_df.csv` dapat terbaca.
-- Jika aplikasi gagal membaca dataset, pastikan `all_df.csv` berada di folder yang sama dengan `dashboard.py`.
-- Dashboard yang sudah dipublikasikan dapat dilihat melalui link pada file `link.txt`.
+- Run `streamlit run dashboard.py` from the project root folder so the app can read `all_df.csv`.
+- If the app fails to load the dataset, make sure `all_df.csv` is in the same folder as `dashboard.py`.
+- The published dashboard link is available in `link.txt`.
 
 ## Dataset
 
-Dataset berasal dari Bike Sharing Dataset oleh Hadi Fanaee-T dan Joao Gama. Dataset ini berisi catatan penyewaan sepeda yang dipengaruhi oleh faktor waktu, cuaca, musim, temperatur, kelembapan, hari kerja, dan hari libur.
+The dataset comes from the Bike Sharing Dataset by Hadi Fanaee-T and Joao Gama. It contains bike rental records influenced by time, weather, season, temperature, humidity, working days, and holidays.
 
-Referensi:
+Reference:
 
 Fanaee-T, Hadi, and Gama, Joao. "Event labeling combining ensemble detectors and background knowledge." Progress in Artificial Intelligence, 2013.
